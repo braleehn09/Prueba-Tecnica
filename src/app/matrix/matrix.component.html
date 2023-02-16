@@ -1,0 +1,60 @@
+<div class="flex flex-col items-center justify-center h-screen">
+  <h1 class="text-3xl font-bold mb-8">Operaciones de Matrices</h1>
+  
+  <div class="flex items-center">
+    <div class="mr-8">
+      <h2 class="text-xl font-bold mb-2">Matriz A:</h2>
+      <table>
+        <tbody>
+          <tr *ngFor="let row of matrixA; let i = index">
+            <ng-container *ngFor="let col of row; let j = index">
+              <td class="p-2"><input [(ngModel)]="matrixA[i][j]" type="number" class="w-16 h-8 text-center border rounded-md"></td>
+            </ng-container>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="mr-8">
+      <h2 class="text-xl font-bold mb-2">Matriz B:</h2>
+      <table>
+        <tbody>
+          <tr *ngFor="let row of matrixB; let i = index">
+            <ng-container *ngFor="let col of row; let j = index">
+              <td class="p-2"><input [(ngModel)]="matrixB[i][j]" type="number" class="w-16 h-8 text-center border rounded-md"></td>
+            </ng-container>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="mx-8">
+      <div class="text-3xl mb-2">+</div>
+      <div class="mb-8">
+        <button (click)="addMatrices()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          Sumar
+        </button>
+      </div>
+
+      <div class="text-3xl mb-2">*</div>
+      <div>
+        <button (click)="multiplyMatrices()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          Multiplicar
+        </button>
+      </div>
+    </div>
+
+    <div class="mx-8">
+      <h2 class="text-xl font-bold mb-2">Resultado:</h2>
+      <table *ngIf="resultMatrix">
+        <tbody>
+          <tr *ngFor="let row of resultMatrix">
+            <ng-container *ngFor="let col of row">
+              <td class="p-2">{{ col }}</td>
+            </ng-container>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="bg-custom-background min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-md w-full space-y-8" src="https://www.svgrepo.com/show/404337/tea-drink-coffee-cup-glass-hot.svg">
+        <div>
+          <img class="mx-auto h-24 w-24" src="https://cdn-icons-png.flaticon.com/512/3067/3067572.png" alt="Workflow">
+          <h2 class="mt-5 text-center text-4xl font-extrabold text-white-1000" style="color: white;">
+            _...Iniciar sesión👻
+          </h2>
+        </div>
+  
+            <form class="max-w-sm w-full" (ngSubmit)="login()">
+              <input type="hidden" name="remember" value="true">
+              <div class="rounded-md shadow-sm -space-y-px">
+                <div>
+                  <label for="username" class="sr-only">Nombre de usuario</label>
+                  <input id="username" name="username" type="text" autocomplete="username" required [(ngModel)]="username" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Nombre de usuario">
+                </div>
+                <div>
+                  <label for="password" class="sr-only">Contraseña</label>
+                  <input id="password" name="password" type="password" autocomplete="current-password" required [(ngModel)]="password" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Contraseña">
+                </div>
+              </div>
+      
+        
+          <br>
+          <div class="flex items-center justify-between font-medium text-sky-blue hover:text-gray-900">
+            <div class="flex items-center">
+              <input id="remember_me" name="remember_me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-500 rounded">
+              <label for="remember_me" class="ml-2 block text-sm text-gray-900" style="color: white;">
+                Recordarme
+              </label>
+            </div>
+      <br>
+      <div class="text-sm" style="color: white;">
+          <a href="#" class="font-medium text-sky-blue hover:text-blue-500 ">
+            ¿Olvidaste tu contraseña?
+          </a>
+        </div>
+      </div>      
+      <br>
+      <div>
+          <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400">
+            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+              <!-- Heroicon name: solid/lock-closed -->
+              <svg class="h-5 w-5 text-sky-400 group-hover:text-orange-300">
+                <path fill-rule="evenodd" clip-rule="evenodd" />
+              </svg>
+            </span>
+            Iniciar sesión
+          </button>
+        </div>      
+          </form>
+        </div>
+      </div>  
+  </div>

@@ -1,0 +1,6 @@
+.bg-custom-background {
+    background-image: url(https://www.xtrafondos.com/wallpapers/rick-3248.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+  }

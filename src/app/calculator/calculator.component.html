@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./calculator.component.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css">
+</head>
+<body class="bg-gray-200">
+  <div class="flex justify-center items-center h-screen">
+    <div class="bg-white rounded-lg p-8 shadow-lg">
+      <div class="calculator-screen bg-gray-100 rounded-lg p-4 mb-4">
+        <input [(ngModel)]="toshow" type="text" value="0" id="result" class="w-full text-right text-4xl font-bold bg-transparent outline-none">
+      </div>
+      <div class="calculator-keys grid grid-cols-4 gap-2 mt-2">
+        <button (click)="addToInput('7')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">7</button>
+        <button (click)="addToInput('8')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">8</button>
+        <button (click)="addToInput('9')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">9</button>
+        <button (click)="addToInput('/')" class="calculator-button bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-2xl font-bold rounded-lg shadow-sm">÷</button>
+      
+        <button (click)="addToInput('4')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">4</button>
+        <button (click)="addToInput('5')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">5</button>
+        <button (click)="addToInput('6')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">6</button>
+        <button (click)="addToInput('*')" class="calculator-button bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-2xl font-bold rounded-lg shadow-sm">×</button>
+      
+        <button (click)="addToInput('1')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">1</button>
+        <button (click)="addToInput('2')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">2</button>
+        <button (click)="addToInput('3')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">3</button>
+        <button (click)="addToInput('-')" class="calculator-button bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-2xl font-bold rounded-lg shadow-sm">-</button>
+      
+        <button (click)="addToInput('0')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm col-span-2">0</button>
+        <button (click)="addToInput('.')" class="calculator-button bg-gray-200 hover:bg-gray-300 active:bg-gray-400 text-2xl font-bold rounded-lg shadow-sm">.</button>
+        <button (click)="handleClearClick()" class="calculator-button bg-red-500 hover:bg-red-600 active:bg-red-700 text-2xl font-bold rounded-lg shadow-sm">AC</button>
+        <button (click)="handleEqualsClick()" class="calculator-button bg-green-500 hover:bg-green-600 active:bg-green-700 text-2xl font-bold rounded-lg shadow-sm">=</button>
+      </div>
+    </div> 
+</div>     
+      <script>
+      function addToInput(number) {
+        document.getElementById("result").value += number;
+      }
+      
+      function handleClearClick() {
+        document.getElementById("result").value = "";
+      }
+      
+      function handleEqualsClick() {
+        const expression = document.getElementById("result").value;
+        const result = eval(expression);
+        document.getElementById("result").value = result;
+      }
+      </script> 
+</body>
+</html>
