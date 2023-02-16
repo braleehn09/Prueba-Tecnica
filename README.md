@@ -8,33 +8,34 @@ Este proyecto es una aplicación web desarrollada en Angular que incluye un logi
 
 Requisitos Previos
 ----------------------------------------------------------------------------
-Antes de empezar, es necesario tener instalado Node.js y Angular CLI en su equipo. Si no los tienes, sigue estas instrucciones:
+Antes de empezar, es necesario tener instalado Node.js, Angular y Tailwind CSS CLI en su equipo. Si no los tienes, sigue estas instrucciones:
 
-Descarga e instala Node.js en tu equipo desde aquí.
-Abre la terminal de tu sistema operativo y ejecuta el siguiente comando para instalar Angular CLI:
-java
+Descarga e instala Node.js en tu equipo desde aquí "https://nodejs.org/en/".
+Instalar 
+Abre la terminal de tu sistema operativo y ejecuta el siguiente comando para instalar Angular CLI y TailWindCSS:
 
-Copy code
+
+
 npm install -g @angular/cli
+----------------------------------------------------------------------------
+
+npm install tailwindcss
 ----------------------------------------------------------------------------
 
 Cómo Usar
 Clona el repositorio en tu equipo.
 bash
 
-Copy code
 git clone https://github.com/tu-usuario/mi-proyecto-angular.git
 ----------------------------------------------------------------------------
 
 Navega al directorio del proyecto y ejecuta el siguiente comando para instalar las dependencias:
 
-Copy code
 npm install
 ----------------------------------------------------------------------------
 
 Ejecuta el servidor de desarrollo de Angular para ver la aplicación en el navegador.
 
-Copy code
 ng serve
 ----------------------------------------------------------------------------
 
@@ -45,9 +46,7 @@ Login de Usuario
 ----------------------------------------------------------------------------
 La aplicación incluye un login de usuario con datos de mockup API y una contraseña cifrada. Para acceder a la aplicación, utiliza las siguientes credenciales:
 
-makefile
 
-Copy code
 Usuario: username 1
 Contraseña: password 1
 
